@@ -46,15 +46,23 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*Thread thread = new Thread(new Runnable() {
+       /* Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 SharedPreferences getProfs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                boolean isFirstStart = getProfs.getBoolean("firstStart", true);
                 if (isFirstStart){
-
+                    startActivity (new Intent(MainActivity.this, SatuFagment.class));
+                    SharedPreferences.Editor e = getProfs.edit();
+                    e.putBoolean("firstStart", false);
+                    e.apply();
                 }
             }
-        })*/
+        });
+
+        thread.start();*/
+        changePage(R.id.nav_camera);
+        navigationView.setCheckedItem(R.id.nav_camera);
     }
 
     @Override
@@ -93,24 +101,31 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
-        Fragment fragment = null;
         int id = item.getItemId();
+        changePage(id);
+        return true;
+
+
+    }
+
+    private void changePage(int id) {
+        Fragment fragment = null;
 
         if (id == R.id.nav_camera) {
             fragment = new SatuFragment();
+            setTitle("Now Playing");
         } else if (id == R.id.nav_gallery) {
             fragment = new DuaFragment();
+            setTitle("Upcoming");
         } else if (id == R.id.nav_new) {
             fragment = new TigaFragment();
+            setTitle("Top Rate");
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.satu, fragment).commitNow();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
-
     }
 
     @Override
