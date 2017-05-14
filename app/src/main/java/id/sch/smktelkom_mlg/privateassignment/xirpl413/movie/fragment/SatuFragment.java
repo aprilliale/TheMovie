@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.R;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.SourceAdapter;
-import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Source;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Result;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.SourcesResponse;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.service.GsonGetRequest;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.service.VolleySingleton;
@@ -28,7 +28,7 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.service.VolleySingl
  * A simple {@link Fragment} subclass.
  */
 public class SatuFragment extends Fragment implements SourceAdapter.ISourceAdapter {
-    ArrayList<Source> mList = new ArrayList<>();
+    ArrayList<Result> mList = new ArrayList<>();
     SourceAdapter mAdapter;
 
 
@@ -66,7 +66,7 @@ public class SatuFragment extends Fragment implements SourceAdapter.ISourceAdapt
                     @Override
                     public void onResponse(SourcesResponse response) {
                         Log.d("FLOW", "onResponse: " + (new Gson().toJson(response)));
-                        mList.addAll(response.sources);
+                        mList.addAll(response.results);
                         mAdapter.notifyDataSetChanged();
                     }
 

@@ -8,5 +8,5 @@ import java.util.List;
 
 public class SourcesResponse {
     public String status;
-    public List<Source> sources;
+    public List<Result> results;
 }

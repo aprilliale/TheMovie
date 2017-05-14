@@ -6,11 +6,11 @@ import java.util.List;
  * Created by rongrong on 14/05/2017.
  */
 
-public class Source {
+public class Result {
     public String original_language;
     public String original_title;
     public String overview;
-    public double popularty;
+    public double populariy;
     public String poster_path;
     public String release_date;
     public int revenue;
@@ -21,7 +21,6 @@ public class Source {
     public boolean video;
     public double vote_average;
     public int vote_count;
-
     //public List<String> urlsToLogos;
     public List<String> sortBysAvailable;
     public int color;

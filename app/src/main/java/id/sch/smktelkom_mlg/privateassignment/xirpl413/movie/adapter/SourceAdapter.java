@@ -5,23 +5,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.R;
-import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Source;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Result;
 
 /**
  * Created by rongrong on 14/05/2017.
  */
 
 public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder> {
-    ArrayList<Source> list;
+    ArrayList<Result> list;
     ISourceAdapter mISourceAdapter;
 
-    public SourceAdapter(Context context, ArrayList<Source> list) {
+    public SourceAdapter(Context context, ArrayList<Result> list) {
         this.list = list;
         mISourceAdapter = (ISourceAdapter) context;
     }
@@ -36,7 +35,7 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Source result = list.get(position);
+        Result result = list.get(position);
         holder.tvName.setText(result.original_title);
         holder.tvDesc.setText(result.overview);
         holder.itemView.setBackgroundColor(result.color);
@@ -56,13 +55,11 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvName;
         TextView tvDesc;
-        ImageView ivFoto;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvName = (TextView) itemView.findViewById(R.id.textViewJudul);
             tvDesc = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
-            ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
         }
     }
 }
