@@ -71,6 +71,13 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
             tvName = (TextView) itemView.findViewById(R.id.textViewJudul);
             tvDesc = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
             ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
+
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    mISourceAdapter.showArticles(list.get(getAdapterPosition()).original_title,o);
+//                }
+//            });
         }
     }
 }
