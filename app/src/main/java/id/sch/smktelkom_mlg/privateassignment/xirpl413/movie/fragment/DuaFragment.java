@@ -18,7 +18,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.R;
-import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.SourceAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.DataAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Result;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.SourcesResponse;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.service.GsonGetRequest;
@@ -27,9 +27,9 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.service.VolleySingl
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DuaFragment extends Fragment implements SourceAdapter.ISourceAdapter {
+public class DuaFragment extends Fragment implements DataAdapter.IDataAdapter {
     ArrayList<Result> mList = new ArrayList<>();
-    SourceAdapter mAdapter;
+    DataAdapter mAdapter;
 
 
     public DuaFragment() {
@@ -50,7 +50,7 @@ public class DuaFragment extends Fragment implements SourceAdapter.ISourceAdapte
 
         RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        mAdapter = new SourceAdapter(this.getActivity(), mList);
+        mAdapter = new DataAdapter(this.getActivity(), mList);
         recyclerView.setAdapter(mAdapter);
 
         downloadDataSources();

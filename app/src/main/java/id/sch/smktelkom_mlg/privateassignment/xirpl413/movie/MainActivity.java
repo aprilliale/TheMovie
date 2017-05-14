@@ -14,12 +14,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.DataAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.SourceAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.DuaFragment;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.SatuFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, SourceAdapter.ISourceAdapter {
+        implements NavigationView.OnNavigationItemSelectedListener, SourceAdapter.ISourceAdapter, DataAdapter.IDataAdapter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

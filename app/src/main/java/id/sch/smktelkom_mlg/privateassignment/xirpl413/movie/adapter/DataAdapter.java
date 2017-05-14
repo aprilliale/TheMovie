@@ -5,7 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -19,9 +22,11 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Result;
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     ArrayList<Result> listm;
     IDataAdapter mIDataAdapter;
+    Context context;
 
     public DataAdapter(Context context, ArrayList<Result> list) {
         this.listm = list;
+        this.context = context;
         mIDataAdapter = (IDataAdapter) context;
     }
 
@@ -39,7 +44,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         holder.tvName.setText(result.original_title);
         holder.tvDesc.setText(result.overview);
         holder.itemView.setBackgroundColor(result.color);
-
+        Glide.with(context)
+                .load("http://image.tmdb.org/t/p/w500" + result.poster_path)
+                .into(holder.ivData);
     }
 
     @Override
@@ -56,11 +63,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvName;
         TextView tvDesc;
+        ImageView ivData;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvName = (TextView) itemView.findViewById(R.id.textViewJud);
             tvDesc = (TextView) itemView.findViewById(R.id.textViewDes);
+            ivData = (ImageView) itemView.findViewById(R.id.imageViewData);
         }
     }
 }
