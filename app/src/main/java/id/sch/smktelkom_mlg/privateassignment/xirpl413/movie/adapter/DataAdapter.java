@@ -16,26 +16,26 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.model.Result;
  * Created by rongrong on 14/05/2017.
  */
 
-public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder> {
-    ArrayList<Result> list;
-    ISourceAdapter mISourceAdapter;
+public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
+    ArrayList<Result> listm;
+    IDataAdapter mIDataAdapter;
 
-    public SourceAdapter(Context context, ArrayList<Result> list) {
-        this.list = list;
-        mISourceAdapter = (ISourceAdapter) context;
+    public DataAdapter(Context context, ArrayList<Result> list) {
+        this.listm = list;
+        mIDataAdapter = (IDataAdapter) context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.isilayout, parent, false);
+                .inflate(R.layout.datalayout, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Result result = list.get(position);
+        Result result = listm.get(position);
         holder.tvName.setText(result.original_title);
         holder.tvDesc.setText(result.overview);
         holder.itemView.setBackgroundColor(result.color);
@@ -44,12 +44,12 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        if (list != null)
-            return list.size();
+        if (listm != null)
+            return listm.size();
         return 0;
     }
 
-    public interface ISourceAdapter {
+    public interface IDataAdapter {
         void showArticles(String original_title, String overview);
     }
 
@@ -59,8 +59,8 @@ public class SourceAdapter extends RecyclerView.Adapter<SourceAdapter.ViewHolder
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvName = (TextView) itemView.findViewById(R.id.textViewJudul);
-            tvDesc = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
+            tvName = (TextView) itemView.findViewById(R.id.textViewJud);
+            tvDesc = (TextView) itemView.findViewById(R.id.textViewDes);
         }
     }
 }

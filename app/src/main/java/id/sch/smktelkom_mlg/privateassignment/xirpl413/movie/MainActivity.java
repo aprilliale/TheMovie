@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.SourceAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.DuaFragment;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.SatuFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             fragment = new SatuFragment();
         } else if (id == R.id.nav_gallery) {
-
+            fragment = new DuaFragment();
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
