@@ -58,7 +58,7 @@ public class DuaFragment extends Fragment implements SourceAdapter.ISourceAdapte
     }
 
     private void downloadDataSources() {
-        String url = "https://api.themoviedb.org/3/movie/top_rated?api_key=04ca23bae8e107134d043bd503b5229b&";
+        String url = "https://api.themoviedb.org/3/movie/upcoming?api_key=04ca23bae8e107134d043bd503b5229b&";
 
         GsonGetRequest<SourcesResponse> myRequest = new GsonGetRequest<SourcesResponse>
                 (url, SourcesResponse.class, null, new Response.Listener<SourcesResponse>() {

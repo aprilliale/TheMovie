@@ -91,14 +91,6 @@ public class MainActivity extends AppCompatActivity
             fragment = new SatuFragment();
         } else if (id == R.id.nav_gallery) {
             fragment = new DuaFragment();
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.satu, fragment).commitNow();
