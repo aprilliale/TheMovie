@@ -16,11 +16,13 @@ import android.view.View;
 
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.DataAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.SourceAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.TigaAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.DuaFragment;
 import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.SatuFragment;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.TigaFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, SourceAdapter.ISourceAdapter, DataAdapter.IDataAdapter {
+        implements NavigationView.OnNavigationItemSelectedListener, SourceAdapter.ISourceAdapter, DataAdapter.IDataAdapter, TigaAdapter.ITigaAdapter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity
             fragment = new SatuFragment();
         } else if (id == R.id.nav_gallery) {
             fragment = new DuaFragment();
+        } else if (id == R.id.nav_new) {
+            fragment = new TigaFragment();
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.satu, fragment).commitNow();
