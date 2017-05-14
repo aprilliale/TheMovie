@@ -21,9 +21,8 @@ link untuk The Movie Database(TMdb) API : <br>
 https://www.themoviedb.org/documentation/api <br>
 <br>
 Jenis Navigasi yang digunakan : <br>
-<br>
-<br>
-<br>
+![adnofhdj](https://cloud.githubusercontent.com/assets/22130552/26038282/4fac20a6-392f-11e7-99d9-7b0149be5495.JPG) <br>
+![androiddd](https://cloud.githubusercontent.com/assets/22130552/26038283/4fc1c0be-392f-11e7-833a-eff273b7ffcd.JPG) <br>
 <br>
 Library dari Local Database yang digunakan pada aplikasi <br>
 <br>
