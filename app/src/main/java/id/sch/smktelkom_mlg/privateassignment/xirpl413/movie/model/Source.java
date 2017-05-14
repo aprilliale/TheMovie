@@ -7,13 +7,21 @@ import java.util.List;
  */
 
 public class Source {
-    public String id;
-    public String name;
-    public String description;
-    public String url;
-    public String category;
-    public String language;
-    public String country;
+    public String original_language;
+    public String original_title;
+    public String overview;
+    public double popularty;
+    public String poster_path;
+    public String release_date;
+    public int revenue;
+    public int runtime;
+    public String status;
+    public String tagline;
+    public String title;
+    public boolean video;
+    public double vote_average;
+    public int vote_count;
+
     //public List<String> urlsToLogos;
     public List<String> sortBysAvailable;
     public int color;

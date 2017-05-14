@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,8 +14,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.adapter.SourceAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl413.movie.fragment.SatuFragment;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, SourceAdapter.ISourceAdapter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,10 +82,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
+        Fragment fragment = null;
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            fragment = new SatuFragment();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -94,8 +100,15 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.satu, fragment).commitNow();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void showArticles(String original_title, String overview) {
+
     }
 }
