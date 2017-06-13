@@ -22,8 +22,8 @@ Kelas : XI RPL 4 <br>
 No : 13 <br>
 NIS : 4705/1424.070 <br>
 Sekolah : Telkom School Malang <br> <br>
-Jenis Lokal DB yang digunakan : <br> 
-SQLite <br> <br>
+Jenis Library dan Lokal DB yang digunakan : <br> 
+Volley dan SQLite <br> <br>
 Jenis navigasi yang digunakan : <br>
 ![adnofhdj](https://cloud.githubusercontent.com/assets/22130552/26038282/4fac20a6-392f-11e7-99d9-7b0149be5495.JPG) 
 ![androiddd](https://cloud.githubusercontent.com/assets/22130552/26038283/4fc1c0be-392f-11e7-833a-eff273b7ffcd.JPG) 
