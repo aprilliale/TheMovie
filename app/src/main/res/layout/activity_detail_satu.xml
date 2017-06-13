@@ -5,79 +5,120 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/card_margin"
-        android:elevation="3dp"
-        card_view:cardCornerRadius="@dimen/card_album_radius">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right|bottom"
-            android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingRight="5dp">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="@dimen/card_album_radius">
 
-            <ImageView
-                android:id="@+id/imageViewPoster"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:scaleType="fitXY"
-                android:text="budal" />
-
-            <TextView
-                android:id="@+id/textViewName"
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_satu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingTop="@dimen/album_title_padding"
-                android:text="judul"
-                android:textColor="@color/album_title"
-                android:textSize="@dimen/album_title" />
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/AppTheme.AppBarOverlay" />=
 
-            <TextView
-                android:id="@+id/coming_textViewDate"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:text="Tanggal"
-                android:textColor="@color/album_title"
-                android:textSize="14dp" />
+                android:layout_height="match_parent"
+                android:gravity="right|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
 
-            <TextView
-                android:id="@+id/textViewDesc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewName"
-                android:maxLines="3"
-                android:paddingBottom="@dimen/songs_count_padding_bottom"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingRight="@dimen/album_title_padding"
-                android:text="Penjelasan"
-                android:textSize="@dimen/songs_count" />
+                <ImageView
+                    android:id="@+id/imageViewPoster"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:text="budal" />
 
-            <TextView
-                android:id="@+id/textViewVoteCount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewName"
-                android:maxLines="3"
-                android:paddingBottom="@dimen/songs_count_padding_bottom"
-                android:paddingLeft="@dimen/album_title_padding"
-                android:paddingRight="@dimen/album_title_padding"
-                android:text="Penjelasan"
-                android:textSize="@dimen/songs_count" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewOriginalLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:paddingTop="20dp"
+                    android:text="Judul :"
+                    android:textSize="25dp" />
 
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:text="Penjelasan"
+                    android:textSize="20dp" />
 
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:text="Description :"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/textViewOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:text="Penjelasan"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textViewRelease_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:text="Release Date :"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/textViewDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/album_title_padding"
+                    android:paddingRight="@dimen/album_title_padding"
+                    android:text="Penjelasan"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Simpan Bookmarks" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
 
 </LinearLayout>
-
 
