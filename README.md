@@ -1,6 +1,6 @@
 # Movie
 Link Apk : <br>
-https://drive.google.com/open?id=0B7SaqI0_zGi_eGctcm5fTGpUQms 
+https://drive.google.com/open?id=0B7SaqI0_zGi_N2lpaEZyTkRCSHM
 <br><br>
 Deskripsi tentang Aplikasi <br>
 Aplikasi Movie adalah sebuah aplikasi yang dapat menampilkan list movie yang ada di dunia. 
@@ -22,7 +22,8 @@ Kelas : XI RPL 4 <br>
 No : 13 <br>
 NIS : 4705/1424.070 <br>
 Sekolah : Telkom School Malang <br> <br>
-
+Jenis Lokal DB yang digunakan : <br> 
+SQLite <br> <br>
 Jenis navigasi yang digunakan : <br>
 ![adnofhdj](https://cloud.githubusercontent.com/assets/22130552/26038282/4fac20a6-392f-11e7-99d9-7b0149be5495.JPG) 
 ![androiddd](https://cloud.githubusercontent.com/assets/22130552/26038283/4fc1c0be-392f-11e7-833a-eff273b7ffcd.JPG) 
